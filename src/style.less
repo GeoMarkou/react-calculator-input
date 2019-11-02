@@ -1,0 +1,93 @@
+@border: 1px solid rgba(0, 0, 0, 0.2);
+@border-radius: 5px;
+@spacing-outer: 10px;
+@spacing-inner: 5px;
+@color-outer: rgb(240, 240, 240);
+@color-inner: rgb(247, 247, 247);
+@main-button-color: green;
+
+.ReactCalculator {
+    border: @border;
+    border-radius: @border-radius;
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: @spacing-outer;
+    box-sizing: border-box;
+    background-color: @color-outer;
+
+    > * {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    .HistoryPane {
+        border: @border;
+        flex: 1 1 auto;
+        overflow: auto;
+        background-color: @color-inner;
+
+        button {
+            width: 100%;
+            height: 40px;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            > * {
+                & + * {
+                    margin-left: @spacing-inner;
+                }
+            }
+
+            & + button {
+                border-top: 1px solid rgba(0, 0, 0, 0.3);
+            }
+
+            .Output {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .InputPane {
+        border: @border;
+        border-top: 0;
+        height: 60px;
+        flex: 0 0 60px;
+        font-size: 1.2em;
+        padding: @spacing-outer;
+    }
+
+    .ButtonPane {
+        height: 175px;
+        flex: 0 0 $height;
+        display: grid;
+        gap: @spacing-inner;
+        grid-gap: @spacing-inner;
+        padding-top: @spacing-inner;
+
+        button {
+            background-color: @color-inner;
+            border: @border;
+            border-radius: @border-radius;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .EqualsButton {
+            background-color: @main-button-color;
+            color: contrast(@main-button-color);
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "sourceMap": true,
+        "module": "esnext",
+        "target": "esnext",
+        "jsx": "react",
+		"esModuleInterop": true,
+		"lib": [ "esnext", "dom" ],
+        "moduleResolution": "node",
+        "baseUrl": ".",
+        "outDir": "dist"
+    }
+}

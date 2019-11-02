@@ -1,0 +1,41 @@
+{
+  "name": "react-calculator-input",
+  "version": "0.0.1",
+  "description": "React calculator tool",
+  "scripts": {
+    "dev": "webpack -w -d --progress",
+    "prod": "webpack -p --progress",
+    "stats": "webpack -p --progress --json > stats.json"
+  },
+  "keywords": [
+    "node",
+    "npm",
+    "react",
+    "calculator"
+  ],
+  "author": "Georgios Markou",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/..."
+  },
+  "main": "./dist/index.js",
+  "module": "./src/index.tsx",
+  "types": "./dist/index.d.ts",
+  "dependencies": {
+    "mathjs": "^6.2.3",
+    "react": "^16.11.0"
+  },
+  "devDependencies": {
+    "@types/mathjs": "^6.0.2",
+    "@types/react": "^16.9.11",
+    "css-loader": "^3.2.0",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "style-loader": "^1.0.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.6.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
